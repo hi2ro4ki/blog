@@ -1,0 +1,34 @@
+
+/* =========================
+   1. 基本設定
+========================= */
+
+:root {
+  font-family: system-ui, sans-serif;
+  color: #252822;
+  background: #f7f7f4;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+/* =========================
+   2. 基本要素
+========================= */
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

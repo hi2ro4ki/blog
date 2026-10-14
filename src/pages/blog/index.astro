@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/baselayout.astro";
+
+// content.config.tsで定義したコレクション名を指定して、ブログ記事の一覧を取得する
+const posts = await getCollection("blog");
+---
+
+<BaseLayout title="ブログ一覧 | My Blog">
+  <h1>ブログ一覧</h1>
+
+  {posts.map((post) => (
+    <article>
+      <h2>
+        <a href={`/blog/${post.id}/`}>
+          {post.data.title}
+        </a>
+      </h2>
+      <p>{post.data.description}</p>
+      <p>{post.data.date.toLocaleDateString("ja-JP")}</p>
+    </article>
+  ))}
+</BaseLayout>
