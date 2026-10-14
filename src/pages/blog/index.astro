@@ -12,7 +12,7 @@ const posts = await getCollection("blog");
   {posts.map((post) => (
     <article>
       <h2>
-        <a href={`/blog/${post.id}/`}>
+        <a href={import.meta.env.BASE_URL + `/blog/${post.id}/`}>
           {post.data.title}
         </a>
       </h2>
