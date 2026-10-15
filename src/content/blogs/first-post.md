@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/bloglayout.astro"
 title: "test"
-date: 2026-10-14\
+date: 2026-10-14
 ---
 
 # TEST
