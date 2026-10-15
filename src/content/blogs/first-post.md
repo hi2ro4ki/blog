@@ -1,4 +1,5 @@
 ---
+layout: "../../layouts/bloglayout.astro"
 title: "Astroを学び始めた"
 date: 2026-10-14
 description: "Astroでブログを作り始めた記録。"

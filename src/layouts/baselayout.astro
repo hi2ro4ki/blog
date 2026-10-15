@@ -14,22 +14,40 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <header>
 
-    <h1><a href={import.meta.env.BASE_URL}>My Blog</a></h1>
-    <nav>
-      <a href={import.meta.env.BASE_URL}>ホーム</a>
-      <a href={import.meta.env.BASE_URL + '/about/'}>About</a>
-    </nav>
+    <h1>monologia</h1>
 
-    </header>
 
     <main>
       <slot />
     </main>
 
-    <footer>
-      <p>My Blog</p>
-    </footer>
   </body>
 </html>
+
+<style is:global>
+    /* ブラウザ固有の余白を消す */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* サイト全体の基本スタイル */
+  body {
+    background-color: #f7f7f7;
+    color: #222222;
+    font-family: "MS Gothic", "MS ゴシック", "Courier New", monospace;
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+    
+  }
+  h1 {
+    /* 上に余白をつくって全体を下に押し下げる（数値はお好みで調整） */
+    margin-top: 70px;
+    margin-bottom: 70px;
+    /* テキスト自体を中央寄せにするなら text-align がおすすめ */
+    text-align: center;
+  }
+
+</style>

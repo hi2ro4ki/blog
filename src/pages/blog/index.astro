@@ -7,17 +7,45 @@ const posts = await getCollection("blog");
 ---
 
 <BaseLayout title="ブログ一覧 | My Blog">
-  <h1>ブログ一覧</h1>
-
+  <div class="blog-container">
   {posts.map((post) => (
     <article>
-      <h2>
+      <p>
         <a href={import.meta.env.BASE_URL + `/blog/${post.id}/`}>
           {post.data.title}
         </a>
-      </h2>
-      <p>{post.data.description}</p>
+      </p>
       <p>{post.data.date.toLocaleDateString("ja-JP")}</p>
     </article>
   ))}
+  </div>
 </BaseLayout>
+
+
+<style>
+  .blog-container {
+    max-width: 500px; /* 横幅を絞る（お好みの幅に調整可能） */
+    margin: 0 auto;  /* 左右の中央寄せ */
+    padding: 0 16px; /* スマホ表示時に画面端にくっつかないための左右の余白 */
+
+      /* 1. 箱の高さを指定する（これを超えるとスクロールする） */
+    height: 300px; /* または max-height: 400px; */
+
+    /* 2. はみ出た中身を自動で縦スクロールにする */
+    overflow-y: auto;
+  }
+  p {
+    font-size: 15px;
+  }
+  article {
+    display: flex;
+    flex-direction: row; /* 横に並べる */
+    gap: 20px; /* 子要素の間隔を空ける */
+    /* center */
+    align-items: center; /* 子要素を縦方向の中央に揃える */
+    justify-content: center; /* 子要素を横方向の中央に揃える */
+
+
+  }
+
+</style>
