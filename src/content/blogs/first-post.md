@@ -1,20 +1,33 @@
 ---
 layout: "../../layouts/bloglayout.astro"
-title: "Astroを学び始めた"
-date: 2026-10-14
-description: "Astroでブログを作り始めた記録。"
+title: "test"
+date: 2026-10-14\
 ---
 
-# Astroを学び始めた
+# TEST
 
-今日からAstroを使ってブログを作り始めた。
-
-## 今日学んだこと
-
-- ページとレイアウトの役割
-- `import` の意味
-- URLとファイルの対応関係
-
-これから少しずつ機能を追加していく。
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+a
+aaaaaa
+aaaaaaaaaa
+aaa
+a
+aaaaa
 
 
+## TEST
+
+*aaaaa*
+aaaaa
+
+### TEST
+
+- a
+- b
+- c
+- d
+
+> aaaaaa
+> a
+> aaaa
+> a
