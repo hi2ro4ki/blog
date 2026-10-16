@@ -17,13 +17,23 @@ const { Content } = await render(post);
 ---
 
 <BlogLayout title = {post.data.title}>
-  <article>
-    <!-- <h1>{post.data.title}</h1>
-    <p>{post.data.date.toLocaleDateString("ja-JP")}</p>
-    <p>{post.data.description}</p> -->
-    <Content />
-  </article>
-  
-  <a href={import.meta.env.BASE_URL + '/blog/'}>ブログ一覧へ戻る</a>
-
+  <div class = "text">    
+    <article>
+      <!-- <h1>{post.data.title}</h1>
+      <p>{post.data.date.toLocaleDateString("ja-JP")}</p>
+      <p>{post.data.description}</p> -->
+      <Content />
+    </article>
+  </div>
 </BlogLayout>
+
+<style>
+  /* ブログ文章の周りに余白を持たせたい */
+  .text {
+    display: flex;
+    padding: 0 16px; /* スマホ表示時に画面端にくっつかないための左右の余白 */
+    /* 上下も余白を持たせたい */
+    margin-top: 100px;
+    justify-content: center; /* 子要素を横方向の中央に揃える */
+  }
+</style>
